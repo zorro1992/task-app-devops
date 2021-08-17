@@ -29,3 +29,12 @@ jobs:
     - name: Testing python code using pytest
       run: |
         pytest test.py
+    - name: Check docker installed or not
+      run: docker run hello-world
+    - name: Push to docker Hub
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        repository: rk045971/task-app-devops
+        tag_with_ref: true
