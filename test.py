@@ -12,6 +12,5 @@ def test_case_2():
 
 def test_case_3():
     response = app.test_client().get('/edit')
-    assert b"To Do App" in response.data
-    assert b"Todo Title" in response.data
+    assert b"Ticketing App" in response.data
     assert b"Add" in response.data
