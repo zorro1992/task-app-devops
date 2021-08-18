@@ -1,0 +1,15 @@
+kubectl apply -f <file_name>
+
+kubectl get deployments task-app
+kubectl describe deployments task-app
+
+kubectl get replicasets
+kubectl describe replicasets
+
+kubectl expose deployment task-app --type=LoadBalancer --name=task-app
+
+kubectl get services task-app
+
+kubectl describe services task-app
+
+kubectl get pods --output=wide
